@@ -1,0 +1,12 @@
+# MongoDB Configuration
+mongo:
+  host: localhost
+  port: 27017
+  db: AutoML
+  username: myUser
+  password: password
+  ingest_collection_name: AutoML_data
+  X_train_collection_name: AutoML_train
+  y_train_collection_name: AutoML_train_target
+  X_test_collection_name: AutoML_test
+  y_test_collection_name: AutoML_test_target
