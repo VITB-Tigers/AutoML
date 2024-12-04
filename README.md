@@ -21,19 +21,19 @@ AutoML makes building, training, and optimizing machine learning models easy by 
 ## Directory Structure
 ```
 ├── Code\
-│   ├── app.py                  # Streamlit web application of the project
-│   ├── db_utils.py             # Utility functions for MongoDB
-│   ├── ingest.py               # Ingest and store data from MongoDB
-│   ├── ml_utils.py             # Functions for the ML models
-│   └── utils.py                # General utility functions (yaml, read files)
+│   ├── app.py                  # Main Streamlit web application for the project.
+│   ├── db_utils.py             # Helper functions for interacting with MongoDB.  
+│   ├── ingest.py               # Handles data ingestion and storage in MongoDB.
+│   ├── ml_utils.py             # Functions to implement and use ML models.
+│   └── utils.py                # General-purpose utilities like YAML handling and file operations.
 ├── Models\
-│   ├── ada_boost_model.pkl     # Saved AdaBoost pickle file
-│   ├── decision_tree_model.pkl # Saved Decision Tree pickle file
-│   └── linear_model.pkl        # Saved Linear Model pickle file
-├── .gitignore                  # 
-├── config.yaml                 # 
-├── README.md                   # Documentation of the project
-└── requirements.txt            # Contains dependencies for the project
+│   ├── ada_boost_model.pkl     # Pre-trained AdaBoost model saved as a pickle file.
+│   ├── decision_tree_model.pkl # Pre-trained Decision Tree model saved as a pickle file.
+│   └── linear_model.pkl        # Pre-trained Linear Regression model saved as a pickle file.
+├── .gitignore                  # Files and directories to be ignored by Git.
+├── config.yaml                 # Configuration file for project settings.
+├── README.md                   # Documentation describing the project purpose, usage, and structure.
+└── requirements.txt            # Dependencies required for the project
 ```
 
 ---
