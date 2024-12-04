@@ -3,19 +3,14 @@
 import yaml
 import pandas as pd
 
+# Load the configuration file
 def load_config():
-    """
-    Load the configuration file
-    """
     with open("config.yaml", "r") as file:
         config = yaml.safe_load(file)
         return config
 
-
+# Read a file and return the data
 def read_file(file_path):
-    """
-    Read a file
-    """
     try :
         data = pd.read_csv(file_path)
         return data

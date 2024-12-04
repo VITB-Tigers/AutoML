@@ -16,8 +16,6 @@ y_test_collection_name = config["mongo"]["y_test_collection_name"]
 
 def split_data_and_save_to_mongo(collection_name, target, train_size):
     """
-    Split data retrieved from MongoDB into training and testing sets and save them back to MongoDB.
-
     Parameters:
     collection_name (str): Name of the MongoDB collection to read data from and save split data.
     target (str): The name of the target variable column.
@@ -52,8 +50,6 @@ def split_data_and_save_to_mongo(collection_name, target, train_size):
 # Function to get the accuracy of the model
 def get_model_accuracy(model, X_test_collection_name, y_test_collection_name):
     """
-    Get the accuracy of a model using the test data.
-    
     Parameters:
     model: The trained model to evaluate.
     X_test_collection_name (str): Name of the MongoDB collection containing the test features.
@@ -75,8 +71,6 @@ def get_model_accuracy(model, X_test_collection_name, y_test_collection_name):
 # Train a Linear Regression model using the training data while taking the parameters: Fit_intercept, n_jobs
 def train_linear_regression(X_train_collection_name, y_train_collection_name, fit_intercept, n_jobs):
     """
-    Train a Linear Regression model using the training data.
-    
     Parameters:
     X_train_collection_name (str): Name of the MongoDB collection containing the training features.
     y_train_collection_name (str): Name of the MongoDB collection containing the training target variable.
@@ -105,8 +99,6 @@ def train_linear_regression(X_train_collection_name, y_train_collection_name, fi
 # Train a Decision Tree Classifier model using the training data while taking the parameters: Min_samples_split, Max_depth, and Criterion    
 def train_decision_tree_classifier(X_train_collection_name, y_train_collection_name, criterion, max_depth, min_samples_split):
     """
-    Train a Decision Tree Classifier model using the training data.
-    
     Parameters:
     X_train_collection_name (str): Name of the MongoDB collection containing the training features.
     y_train_collection_name (str): Name of the MongoDB collection containing the training target variable.
@@ -136,8 +128,6 @@ def train_decision_tree_classifier(X_train_collection_name, y_train_collection_n
 # Train an AdaBoost Classifier model using the training data while taking the parameters: N_estimators, Learning_rate
 def train_adaboost_classifier(X_train_collection_name, y_train_collection_name, n_estimators, learning_rate):
     """
-    Train an AdaBoost Classifier model using the training data.
-    
     Parameters:
     X_train_collection_name (str): Name of the MongoDB collection containing the training features.
     y_train_collection_name (str): Name of the MongoDB collection containing the training target variable.
@@ -165,9 +155,7 @@ def train_adaboost_classifier(X_train_collection_name, y_train_collection_name, 
 
 # Save model to the specified path using joblib
 def save_model(model, model_path):
-    """
-    Save a model to the specified path using joblib.
-    
+    """    
     Parameters:
     model: The model to save.
     model_path (str): The path where the model will be saved.
